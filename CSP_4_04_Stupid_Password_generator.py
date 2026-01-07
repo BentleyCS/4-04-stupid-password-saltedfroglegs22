@@ -16,4 +16,19 @@ Return a list of all "stupid" passwords in alphabetical order.
 
 def stupidPassword(n: int, l: int):
     pass
+    password = []
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    letter = alphabet[:l]
+
+    for c1 in range(1, n+1):
+        for c2 in range(1, n + 1):
+            for c3 in letter:
+                for c4 in letter:
+                    for c5 in range(1, n+1):
+                        if c5 > c1 and c5 > c2:
+                            password.append(str(c1)+str(c2)+str(c3)+str(c4)+str(c5))
+
+    return password
+
+
 
